@@ -5,13 +5,13 @@ public class Solution extends VersionControl {
     
     private int firstBadVersion(int start, int end){
         if(start == end){
-			return start;
-		}
-		int mid = start + (end-start)/2;
-		if(isBadVersion(mid)){
-			return firstBadVersion(start, mid);
-		}else{
-			return firstBadVersion(mid + 1, end);
-		}
+		return start;
+	}
+	int mid = start + (end-start)/2;
+	if(isBadVersion(mid)){
+		return firstBadVersion(start, mid);
+	}else{
+		return firstBadVersion(mid + 1, end);
+	}
     }
 }
